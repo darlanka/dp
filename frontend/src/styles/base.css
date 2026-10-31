@@ -1,0 +1,18 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.7 var(--display); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3 { margin: 0; line-height: 1.05; }
+h3 { font-size: 1.375rem; font-weight: 700; margin-bottom: 0.35rem; }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+::selection { background: var(--amber); color: var(--bg); }
+
+/* Shared utilities used by several components. */
+.mono { font-family: var(--mono); font-size: 0.875rem; color: var(--muted); }
+.section { width: min(1180px, 100% - 2.5rem); margin-inline: auto; padding: clamp(4.5rem, 9vw, 8rem) 0 0; }
+.status { max-width: 40rem; margin: 0 auto; padding: 6rem 1.5rem; }
+.plain-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; max-width: 70ch; }
+.plain-list li::before { content: ''; position: absolute; left: 0; top: 0.85em; width: 0.7rem; height: 2px; background: var(--amber); }
+main { padding-bottom: 1rem; }

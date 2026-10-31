@@ -1,0 +1,6 @@
+:host { display: block; }
+ol { display: grid; gap: 2.25rem; padding: 2rem 1.75rem; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+li { position: relative; padding: 0.9rem 1.1rem; font: 0.9375rem var(--mono); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; animation: pulse 3s ease-in-out infinite; }
+li:not(:last-child)::after { content: ''; position: absolute; left: 1.6rem; top: 100%; height: 2.25rem; border-left: 2px dashed var(--teal); animation: drip 1s linear infinite; }
+@keyframes pulse { 0%, 55%, 100% { border-color: var(--line); box-shadow: none; } 20% { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(245, 181, 68, 0.15); } }
+@keyframes drip { from { opacity: 0.4; } 50% { opacity: 1; } to { opacity: 0.4; } }

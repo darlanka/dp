@@ -1,0 +1,13 @@
+:host {
+  position: fixed; inset: 0 0 auto; z-index: 10; height: 64px;
+  display: flex; align-items: center; gap: 1.25rem; padding: 0 clamp(1.25rem, 4vw, 4rem);
+  background: linear-gradient(var(--bg), transparent); backdrop-filter: blur(6px);
+}
+.mark { font-weight: 800; font-stretch: 125%; letter-spacing: 0.02em; border: 2px solid var(--amber); padding: 0.15rem 0.5rem; border-radius: 4px; }
+.live { display: flex; align-items: center; gap: 0.5rem; font: 0.75rem var(--mono); color: var(--muted); }
+.live i { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); animation: pulse 2s ease-in-out infinite; }
+nav { margin-left: auto; display: none; gap: 1.75rem; font-size: 0.9375rem; }
+nav a { color: var(--muted); transition: color 0.2s; }
+nav a:hover { color: var(--amber); }
+@media (min-width: 760px) { nav { display: flex; } }
+@keyframes pulse { 50% { opacity: 0.3; } }

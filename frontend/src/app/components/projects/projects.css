@@ -1,0 +1,12 @@
+:host { display: block; }
+.slider { outline-offset: 8px; }
+.viewport { overflow: hidden; touch-action: pan-y; }
+.track { display: flex; transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.controls { display: flex; align-items: center; gap: 1.25rem; margin-top: 2.5rem; }
+.arrow { display: grid; place-items: center; width: 44px; height: 44px; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; transition: all 0.2s; }
+.arrow:hover { color: var(--bg); background: var(--amber); border-color: var(--amber); }
+.dots { display: flex; gap: 0.5rem; }
+.dots button { width: 2rem; height: 1.5rem; padding: 0; border: 0; background: linear-gradient(var(--line), var(--line)) center / 100% 4px no-repeat; border-radius: 2px; cursor: pointer; transition: width 0.4s, background-color 0.3s; }
+.dots button.on { width: 3.5rem; background: linear-gradient(var(--amber), var(--amber)) center / 100% 4px no-repeat; }
+.count { margin-left: auto; }
+@media (prefers-reduced-motion: reduce) { .track { transition: none; } }

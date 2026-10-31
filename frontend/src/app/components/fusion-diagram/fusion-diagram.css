@@ -1,0 +1,9 @@
+:host { display: block; }
+figure { margin: 0; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow-x: auto; }
+svg { display: block; width: 100%; min-width: 640px; height: auto; }
+.box rect, .box circle { fill: var(--bg); stroke: var(--line); stroke-width: 1.5; }
+.box .hot { stroke: var(--amber); }
+.label text { fill: var(--ink); font: 13px var(--mono); }
+.label .sub { fill: var(--muted); font-size: 10px; }
+.flow path { stroke: var(--teal); stroke-width: 2; stroke-dasharray: 6 8; animation: flow 1s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -14; } }

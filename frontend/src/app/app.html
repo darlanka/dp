@@ -1,0 +1,24 @@
+@switch (status()) {
+  @case (LoadStatus.Ready) {
+    @if (profile(); as p) {
+      <app-header />
+      <app-hero [profile]="p" />
+      <main>
+        <app-about [paragraphs]="p.about" />
+        <app-experience [jobs]="p.experience" />
+        <app-projects [projects]="p.projects" />
+        <app-research [papers]="p.research" />
+        <app-skills [groups]="p.skills" />
+        <app-background [education]="p.education" [achievements]="p.achievements" />
+        <app-contact [links]="p.links" />
+      </main>
+      <app-footer />
+    }
+  }
+  @case (LoadStatus.Failed) {
+    <p class="status">The site could not load its content. Refresh the page, and if it keeps happening, email me directly.</p>
+  }
+  @default {
+    <p class="status">Loading</p>
+  }
+}

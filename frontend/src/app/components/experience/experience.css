@@ -1,0 +1,10 @@
+:host { display: block; }
+article + article { margin-top: 4rem; }
+header p { margin: 0; color: var(--muted); }
+header p.summary { margin-top: 0.75rem; color: var(--ink); }
+ol { margin: 2rem 0 0 0.5rem; border-left: 2px solid var(--line); }
+li { position: relative; padding: 0 0 1.75rem 2rem; max-width: 70ch; }
+li::before { content: ''; position: absolute; left: -7px; top: 0.6em; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--amber); }
+li:last-child { padding-bottom: 0; }
+.cert { display: inline-block; margin: 1.5rem 0 0 2.5rem; font: 0.9375rem var(--mono); color: var(--amber); border-bottom: 1px solid var(--amber); }
+.cert:hover { color: var(--ink); border-color: var(--ink); }

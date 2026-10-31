@@ -1,0 +1,23 @@
+<section class="section" [id]="id">
+  <app-section-heading title="Experience" />
+  @for (job of jobs(); track job.company) {
+    <article>
+      <header reveal>
+        <h3>{{ job.role }}, {{ job.company }}</h3>
+        <p>{{ job.location }}</p>
+        <p class="mono">{{ job.period }}</p>
+        @if (job.summary) {
+          <p class="summary">{{ job.summary }}</p>
+        }
+      </header>
+      <ol>
+        @for (line of job.highlights; track $index) {
+          <li reveal [revealDelay]="$index * 80">{{ line }}</li>
+        }
+      </ol>
+      @if (job.certificate; as cert) {
+        <a class="cert" [href]="cert.src" target="_blank" rel="noopener" reveal>{{ cert.label }}</a>
+      }
+    </article>
+  }
+</section>

@@ -1,0 +1,15 @@
+<section class="section" [id]="id">
+  <app-section-heading title="Research" />
+  @for (paper of papers(); track paper.title) {
+    <article>
+      <h3 reveal>{{ paper.title }}</h3>
+      <p class="mono" reveal>{{ paper.venue }}. Built with {{ paper.stack }}.</p>
+      <app-fusion-diagram reveal />
+      <ul class="plain-list">
+        @for (line of paper.highlights; track $index) {
+          <li reveal [revealDelay]="$index * 80">{{ line }}</li>
+        }
+      </ul>
+    </article>
+  }
+</section>

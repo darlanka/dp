@@ -1,0 +1,11 @@
+:host { display: block; }
+section { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; padding: 6rem clamp(1.25rem, 4vw, 4rem) 0; }
+section::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, var(--bg) 4%, rgba(11, 24, 32, 0.8) 38%, transparent 68%); pointer-events: none; }
+.body, app-metric-list { position: relative; z-index: 2; }
+.role { font: 500 0.9375rem var(--mono); color: var(--amber); margin-bottom: 0.75rem; }
+h1 { font-size: clamp(2.75rem, 10.5vw, 8.75rem); font-weight: 800; font-stretch: 125%; letter-spacing: -0.025em; line-height: 0.92; }
+.word { display: inline-block; margin-right: 0.22em; white-space: nowrap; }
+.word span { display: inline-block; animation: drop 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.tagline { max-width: 34ch; margin: 1.5rem 0 0.5rem; font-size: 1.25rem; color: var(--muted); }
+.focus { max-width: 44ch; margin: 0 0 2.5rem; font-size: 1.125rem; color: var(--teal); }
+@keyframes drop { from { opacity: 0; transform: translateY(45%); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }

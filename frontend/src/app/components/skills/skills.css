@@ -1,0 +1,10 @@
+:host { display: block; }
+.browser { display: grid; gap: 1.5rem; }
+.groups { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+button { font: 500 0.9375rem var(--display); color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1rem; cursor: pointer; transition: all 0.2s; }
+button small { margin-left: 0.5rem; font: 0.75rem var(--mono); opacity: 0.7; }
+button:hover { color: var(--ink); border-color: var(--muted); }
+button.on { color: var(--bg); background: var(--amber); border-color: var(--amber); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.6rem; min-height: 8rem; align-content: flex-start; padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.chips span { font: 0.9375rem var(--mono); padding: 0.4rem 0.8rem; border-radius: 4px; background: var(--bg); border-left: 3px solid var(--teal); animation: chip 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes chip { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }

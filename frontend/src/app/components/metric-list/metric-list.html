@@ -1,0 +1,9 @@
+<ul>
+  @for (metric of metrics(); track metric.tag) {
+    <li>
+      <span class="value">{{ metric.prefix }}<b [countUp]="metric.value">0</b>{{ metric.suffix }}</span>
+      <span class="label">{{ metric.label }}</span>
+      <span class="tag">{{ metric.tag }}</span>
+    </li>
+  }
+</ul>

@@ -1,0 +1,257 @@
+{
+  "name": "Darlanka Praneeth",
+  "title": "Software Engineer at GE Vernova",
+  "location": "Hyderabad, India",
+  "tagline": "I build Java services and Angular interfaces for industrial IoT software.",
+  "about": [
+    "I'm a software engineer at GE Vernova in Hyderabad. For the past year and a half I've worked on industrial IoT software: Spring Boot services that expose GraphQL, and the Angular interfaces that sit on top of them.",
+    "Most of my work happens where the two meet. I connect an API to a screen, trace a defect from the UI down to the service that caused it, and turn one-off components into ones that several products can share.",
+    "Outside work I do research in medical imaging, and I'm first author on a paper about a multimodal Transformer for Alzheimer's diagnosis. I'm an AI enthusiast, so I also built a chatbot in React. When I find a gap in what I know, I learn it and ship something with it."
+  ],
+  "links": {
+    "email": "darlankapraneethnaidu@gmail.com",
+    "github": "https://github.com/darlanka",
+    "linkedin": "https://linkedin.com/in/darlanka-praneeth"
+  },
+  "experience": [
+    {
+      "company": "GE Vernova (MFG)",
+      "role": "Software Engineer Specialist",
+      "period": "Jan 2025 to present",
+      "location": "Hyderabad, India",
+      "summary": null,
+      "highlights": [
+        "Maintain 5 microservices across the backend, and resolve UI-related bugs in the Angular interfaces whenever they come up.",
+        "Developed features that several teams use, including the GraphQL layer and the common data browser.",
+        "Implemented 20+ GraphQL queries, mutations and resolvers in Java and Spring Boot for industrial dashboards, reusing the existing REST service layer so business logic stays in one place.",
+        "Built the common data browser in TypeScript and RxJS. 3 products use it to browse historian data from IoT devices and to select and configure data sources.",
+        "Cut duplicated UI code by about 40% by separating data access from presentation and making the component configurable through inputs.",
+        "Resolved 30+ defects across Angular interfaces and Java backend APIs by debugging end to end and finding root causes.",
+        "Worked in a 7-person Agile team on sprint planning and code reviews, shipping through Jenkins CI/CD pipelines."
+      ],
+      "certificate": null
+    },
+    {
+      "company": "DRDO, DLRL",
+      "role": "Project Trainee",
+      "period": "30 May to 11 Jul 2023",
+      "location": "Hyderabad, India",
+      "summary": "Project: Creating a custom IP core and integrating it with the system.",
+      "highlights": [
+        "Designed FPGA logic models in VHDL, then simulated, synthesized and implemented them using Vivado and ISE.",
+        "Learned how FPGA logic blocks and LUTs work by implementing designs in Vivado and ISE.",
+        "Integrated hardware and software designs to build a custom IP core on a Virtex-5 ML507 FPGA.",
+        "Built custom IP cores for an OR gate and a full adder."
+      ],
+      "certificate": {
+        "label": "View project training certificate",
+        "src": "/assets/certificates/drdo-certificate.webp"
+      }
+    }
+  ],
+  "research": [
+    {
+      "title": "Multimodal Transformer for Alzheimer's Disease Diagnosis",
+      "stack": "Python and TensorFlow",
+      "venue": "First author of three. Presented at IEEE INDISCON 2026, MNIT Jaipur",
+      "highlights": [
+        "Preprocessed sMRI and fMRI scans of 150 subjects from the ADNI dataset into a paired multimodal dataset for classification.",
+        "Converted 4D fMRI into masked time series for a Transformer encoder and processed 3D sMRI with a CNN, then combined both with attention-based feature fusion and dense classification layers."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "label": "Languages",
+      "items": [
+        "Java",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "C++",
+        "C",
+        "SQL",
+        "Verilog"
+      ]
+    },
+    {
+      "label": "Backend",
+      "items": [
+        "Spring Boot",
+        "GraphQL",
+        "REST APIs",
+        "Microservices",
+        "Node.js"
+      ]
+    },
+    {
+      "label": "Frontend",
+      "items": [
+        "Angular",
+        "RxJS",
+        "React",
+        "HTML",
+        "CSS",
+        "Reusable components"
+      ]
+    },
+    {
+      "label": "Data and tools",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Git",
+        "Docker",
+        "Jenkins",
+        "Linux",
+        "Postman"
+      ]
+    },
+    {
+      "label": "Machine learning",
+      "items": [
+        "TensorFlow",
+        "NumPy",
+        "Transformers",
+        "CNNs"
+      ]
+    },
+    {
+      "label": "Engineering",
+      "items": [
+        "Debugging",
+        "Root cause analysis",
+        "Code reviews",
+        "Agile and Scrum",
+        "API design",
+        "Data structures and algorithms"
+      ]
+    }
+  ],
+  "education": {
+    "school": "National Institute of Technology, Silchar",
+    "degree": "B.Tech in Electronics and Communication Engineering",
+    "period": "2021 to 2025",
+    "score": "CGPA 8.67 out of 10"
+  },
+  "achievements": [
+    "Solved 1000+ problems on LeetCode (510+) and GeeksforGeeks (520+).",
+    "CodeChef 3-star rating, and global rank 254 of 20,000+ participants in one contest.",
+    "Research internship at DRDO, DLRL Hyderabad, May to July 2023, with a research internship certificate.",
+    "Research internship certificate from the Science and Engineering Research Board (SERB)."
+  ],
+  "metrics": [
+    {
+      "tag": "graphql.operations",
+      "label": "GraphQL queries, mutations and resolvers",
+      "value": 20,
+      "prefix": "",
+      "suffix": "+"
+    },
+    {
+      "tag": "defects.resolved",
+      "label": "Defects resolved across UI and APIs",
+      "value": 30,
+      "prefix": "",
+      "suffix": "+"
+    },
+    {
+      "tag": "services.maintained",
+      "label": "Backend microservices I maintain",
+      "value": 5,
+      "prefix": "",
+      "suffix": ""
+    },
+    {
+      "tag": "ui.duplication",
+      "label": "Less duplicated UI code",
+      "value": 40,
+      "prefix": "~",
+      "suffix": "%"
+    }
+  ],
+  "focus": "AI enthusiast. I also build with AI: a multimodal research model and a React chatbot.",
+  "projects": [
+    {
+      "title": "Common data browser",
+      "context": "GE Vernova (MFG)",
+      "summary": "A shared Angular interface for browsing historian data from IoT devices and configuring data sources. Teams drop it into their product instead of building their own.",
+      "highlights": [
+        "Used by 3 products across teams.",
+        "Data access is separate from presentation, and the component is configured through inputs.",
+        "Cut duplicated UI code by about 40%."
+      ],
+      "stack": [
+        "Angular",
+        "TypeScript",
+        "RxJS"
+      ],
+      "steps": [
+        "IoT devices",
+        "Historian data",
+        "Common data browser",
+        "Product screens"
+      ],
+      "images": [],
+      "links": []
+    },
+    {
+      "title": "GraphQL service layer",
+      "context": "GE Vernova (MFG)",
+      "summary": "GraphQL queries, mutations and resolvers that feed industrial dashboards, built on top of the existing REST service layer. One of the 5 backend microservices I maintain.",
+      "highlights": [
+        "20+ queries, mutations and resolvers.",
+        "Reuses REST business logic, so rules live in one place.",
+        "Debugged and fixed defects from the UI down to the API."
+      ],
+      "stack": [
+        "Java",
+        "Spring Boot",
+        "GraphQL",
+        "REST"
+      ],
+      "steps": [
+        "Angular dashboard",
+        "GraphQL resolvers",
+        "REST service layer",
+        "Data sources"
+      ],
+      "images": [],
+      "links": []
+    },
+    {
+      "title": "AI chatbot",
+      "context": "AI project",
+      "summary": "A chatbot web app with a Gemini-inspired interface, built with React and deployed on Render. It has a greeting screen with suggested prompts, a prompt box with image and voice buttons, a loading state while the answer arrives, and a history and settings sidebar.",
+      "highlights": [
+        "Built with React.",
+        "Live and open to try."
+      ],
+      "stack": [
+        "React",
+        "JavaScript",
+        "Render"
+      ],
+      "steps": [],
+      "images": [
+        {
+          "src": "/assets/projects/chatbot-home.webp",
+          "alt": "Chatbot home screen greeting the user with four suggested prompts",
+          "caption": "Home"
+        },
+        {
+          "src": "/assets/projects/chatbot-chat.webp",
+          "alt": "Chatbot showing a user message and an animated loading state for the reply",
+          "caption": "Chat"
+        }
+      ],
+      "links": [
+        {
+          "label": "Try it live",
+          "url": "https://gemini-ko89.onrender.com"
+        }
+      ]
+    }
+  ]
+}

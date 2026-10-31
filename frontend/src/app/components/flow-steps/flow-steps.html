@@ -1,0 +1,5 @@
+<ol>
+  @for (step of steps(); track step; let i = $index) {
+    <li [style.animation-delay.ms]="i * 600">{{ step }}</li>
+  }
+</ol>

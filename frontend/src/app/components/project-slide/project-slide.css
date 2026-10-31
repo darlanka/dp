@@ -1,0 +1,22 @@
+:host { display: block; flex: 0 0 100%; min-width: 0; }
+article { display: grid; gap: 2.5rem; align-items: center; }
+.context { display: inline-block; margin-bottom: 1rem; padding: 0.2rem 0.6rem; font: 0.8125rem var(--mono); color: var(--amber); border: 1px solid var(--amber); border-radius: 4px; }
+h3 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; font-stretch: 112%; letter-spacing: -0.02em; margin-bottom: 1rem; }
+.summary { color: var(--muted); max-width: 52ch; }
+.stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; }
+.stack li { font: 0.8125rem var(--mono); padding: 0.25rem 0.6rem; border-left: 3px solid var(--teal); background: var(--panel); border-radius: 3px; }
+.link { display: inline-block; font: 500 0.9375rem var(--mono); color: var(--bg); background: var(--amber); padding: 0.6rem 1.1rem; border-radius: 6px; transition: transform 0.15s; }
+.link:hover { transform: translateY(-2px); }
+
+/* Content eases in when its slide becomes the active one. */
+.text > *, .visual { opacity: 0; transform: translateY(16px); transition: opacity 0.6s, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
+:host(.active) .text > *, :host(.active) .visual { opacity: 1; transform: none; }
+:host(.active) .text > :nth-child(2) { transition-delay: 0.07s; }
+:host(.active) .text > :nth-child(3) { transition-delay: 0.14s; }
+:host(.active) .text > :nth-child(4) { transition-delay: 0.21s; }
+:host(.active) .text > :nth-child(5) { transition-delay: 0.28s; }
+:host(.active) .text > :nth-child(6) { transition-delay: 0.35s; }
+:host(.active) .visual { transition-delay: 0.2s; }
+
+@media (min-width: 900px) { article { grid-template-columns: 1fr 1.15fr; gap: 4rem; } }
+@media (prefers-reduced-motion: reduce) { .text > *, .visual { opacity: 1; transform: none; } }

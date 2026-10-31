@@ -1,0 +1,14 @@
+<section class="section" [id]="id">
+  <div class="grid">
+    <div reveal>
+      <h3>{{ education().degree }}</h3>
+      <p>{{ education().school }}</p>
+      <p class="mono">{{ education().period }}, {{ education().score }}</p>
+    </div>
+    <ul class="plain-list">
+      @for (item of achievements(); track $index) {
+        <li reveal [revealDelay]="$index * 80">{{ item }}</li>
+      }
+    </ul>
+  </div>
+</section>

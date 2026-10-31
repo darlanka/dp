@@ -1,0 +1,15 @@
+<figure>
+  <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="screen">
+    @for (image of images(); track image.src; let i = $index) {
+      <img [src]="image.src" [alt]="image.alt" [class.on]="selected() === i" loading="lazy" />
+    }
+  </div>
+</figure>
+@if (images().length > 1) {
+  <div class="tabs" role="tablist" aria-label="Screenshots">
+    @for (image of images(); track image.src; let i = $index) {
+      <button type="button" role="tab" [class.on]="selected() === i" [attr.aria-selected]="selected() === i" (click)="select(i)">{{ image.caption }}</button>
+    }
+  </div>
+}

@@ -1,0 +1,4 @@
+:host { display: block; }
+.grid { display: grid; gap: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
+p { margin: 0; color: var(--muted); }
+@media (min-width: 860px) { .grid { grid-template-columns: 1fr 1.4fr; gap: 5rem; } }

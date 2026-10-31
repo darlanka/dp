@@ -1,0 +1,10 @@
+<section class="section" [id]="id">
+  <h2 reveal>Hiring for a backend or full-stack role?</h2>
+  <p class="intro" reveal>Send a note. I read every message and reply by email.</p>
+  <app-contact-form />
+  <ul class="links">
+    <li><a [href]="links().github" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a [href]="links().linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a [href]="'mailto:' + links().email">{{ links().email }}</a></li>
+  </ul>
+</section>

@@ -1,0 +1,8 @@
+<section class="section" [id]="id">
+  <p class="lead" reveal>{{ lead() }}</p>
+  <div class="rest">
+    @for (paragraph of rest(); track $index) {
+      <p reveal [revealDelay]="($index + 1) * 120">{{ paragraph }}</p>
+    }
+  </div>
+</section>

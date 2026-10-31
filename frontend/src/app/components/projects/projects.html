@@ -1,0 +1,27 @@
+<section class="section" [id]="id">
+  <app-section-heading title="Projects" />
+  <div class="slider" role="region" aria-roledescription="carousel" aria-label="Projects" tabindex="0" (keydown)="onKey($event)">
+    <div class="viewport" (pointerdown)="dragStart($event)" (pointerup)="dragEnd($event)">
+      <div class="track" [style.transform]="trackTransform()">
+        @for (project of projects(); track project.title; let i = $index) {
+          <app-project-slide [project]="project" [active]="index() === i" [attr.inert]="index() === i ? null : ''" />
+        }
+      </div>
+    </div>
+
+    <div class="controls">
+      <button type="button" class="arrow" aria-label="Previous project" (click)="previous()">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+      </button>
+      <div class="dots">
+        @for (project of projects(); track project.title; let i = $index) {
+          <button type="button" [class.on]="index() === i" [attr.aria-label]="'Show ' + project.title" [attr.aria-current]="index() === i" (click)="go(i)"></button>
+        }
+      </div>
+      <span class="count mono">{{ index() + 1 }} / {{ projects().length }}</span>
+      <button type="button" class="arrow" aria-label="Next project" (click)="next()">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+:root {
+  --bg: #0b1820;
+  --panel: #11262f;
+  --line: #21404d;
+  --ink: #e8f0f2;
+  --muted: #8ea6b0;
+  --amber: #f5b544;
+  --teal: #4fd1c5;
+  --coral: #ff7a6b;
+  --display: 'Archivo', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}

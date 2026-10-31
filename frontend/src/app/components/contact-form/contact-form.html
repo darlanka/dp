@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <label>
+    Name
+    <input type="text" formControlName="name" autocomplete="name" />
+    @if (showError('name')) {
+      <span class="error">Enter your name.</span>
+    }
+  </label>
+
+  <label>
+    Email
+    <input type="email" formControlName="email" autocomplete="email" />
+    @if (showError('email')) {
+      <span class="error">Enter a valid email address so I can reply.</span>
+    }
+  </label>
+
+  <label>
+    Message
+    <textarea rows="5" formControlName="message"></textarea>
+    @if (showError('message')) {
+      <span class="error">Write at least {{ limits.messageMin }} characters.</span>
+    }
+  </label>
+
+  <!-- Honeypot: hidden from people, filled in by simple bots. -->
+  <input class="trap" type="text" formControlName="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+  <button type="submit" [disabled]="state() === SendState.Sending">
+    {{ state() === SendState.Sending ? 'Sending' : 'Send message' }}
+  </button>
+
+  @switch (state()) {
+    @case (SendState.Sent) {
+      <p class="notice" role="status">Message sent. I'll reply soon.</p>
+    }
+    @case (SendState.Failed) {
+      <p class="notice failed" role="alert">{{ errorText() }}</p>
+    }
+  }
+</form>

@@ -1,0 +1,7 @@
+<a class="mark" [href]="'#' + topId" aria-label="Back to top">DP</a>
+<span class="live"><i></i>online</span>
+<nav aria-label="Sections">
+  @for (item of navItems; track item.id) {
+    <a [href]="'#' + item.id">{{ item.label }}</a>
+  }
+</nav>

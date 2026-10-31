@@ -1,0 +1,18 @@
+<section [id]="id">
+  <app-trend-canvas />
+  <div class="body">
+    <p class="role">{{ profile().title }}</p>
+    <h1 [attr.aria-label]="profile().name">
+      @for (word of nameWords(); track $index) {
+        <span class="word" aria-hidden="true">
+          @for (letter of word; track $index) {
+            <span [style.animation-delay.ms]="letter.delayMs">{{ letter.char }}</span>
+          }
+        </span>
+      }
+    </h1>
+    <p class="tagline">{{ profile().tagline }}</p>
+    <p class="focus">{{ profile().focus }}</p>
+  </div>
+  <app-metric-list [metrics]="profile().metrics" />
+</section>

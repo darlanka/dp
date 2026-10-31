@@ -1,0 +1,27 @@
+<article>
+  <div class="text">
+    <p class="context">{{ project().context }}</p>
+    <h3>{{ project().title }}</h3>
+    <p class="summary">{{ project().summary }}</p>
+    <ul class="plain-list">
+      @for (line of project().highlights; track $index) {
+        <li>{{ line }}</li>
+      }
+    </ul>
+    <ul class="stack">
+      @for (tech of project().stack; track tech) {
+        <li>{{ tech }}</li>
+      }
+    </ul>
+    @for (link of project().links; track link.url) {
+      <a class="link" [href]="link.url" target="_blank" rel="noopener">{{ link.label }}</a>
+    }
+  </div>
+  <div class="visual">
+    @if (project().images.length) {
+      <app-screenshot-viewer [images]="project().images" />
+    } @else {
+      <app-flow-steps [steps]="project().steps" />
+    }
+  </div>
+</article>

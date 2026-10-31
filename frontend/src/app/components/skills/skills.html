@@ -1,0 +1,19 @@
+<section class="section" [id]="id">
+  <app-section-heading title="Skills" />
+  <div class="browser" reveal>
+    <div class="groups" role="tablist" aria-label="Skill groups">
+      @for (group of groups(); track group.label; let i = $index) {
+        <button type="button" role="tab" [class.on]="selectedIndex() === i" [attr.aria-selected]="selectedIndex() === i" (click)="select(i)">
+          {{ group.label }}<small>{{ group.items.length }}</small>
+        </button>
+      }
+    </div>
+    <div class="chips" role="tabpanel">
+      @if (selected(); as group) {
+        @for (item of group.items; track item; let i = $index) {
+          <span [style.animation-delay.ms]="i * 45">{{ item }}</span>
+        }
+      }
+    </div>
+  </div>
+</section>
