@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: dev.praneeth.portfolio.PortfolioApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.741 s -- in dev.praneeth.portfolio.PortfolioApplicationTests
