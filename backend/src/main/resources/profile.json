@@ -174,27 +174,34 @@
   "focus": "AI enthusiast. I also build with AI: a multimodal research model and a React chatbot.",
   "projects": [
     {
-      "title": "Common data browser",
-      "context": "GE Vernova (MFG)",
-      "summary": "A shared Angular interface for browsing historian data from IoT devices and configuring data sources. Teams drop it into their product instead of building their own.",
+      "title": "Mio AI chatBot",
+      "context": "AI project",
+      "summary": "A chat app with its own pink and purple interface, live on Render. It opens on a greeting screen with suggested prompts for chatting, cheering up, coding help and planning, and has a recent-chats sidebar and a prompt box.",
       "highlights": [
-        "Used by 3 products across teams.",
-        "Data access is separate from presentation, and the component is configured through inputs.",
-        "Cut duplicated UI code by about 40%."
+        "Designed and built the interface myself, from the greeting screen to the prompt box.",
+        "Suggested prompts start a conversation in one click.",
+        "Live: you can try it in the preview."
       ],
       "stack": [
-        "Angular",
-        "TypeScript",
-        "RxJS"
+        "React",
+        "JavaScript",
+        "Render"
       ],
-      "steps": [
-        "IoT devices",
-        "Historian data",
-        "Common data browser",
-        "Product screens"
+      "steps": [],
+      "images": [
+        {
+          "src": "/assets/projects/mio-chat-home.png",
+          "alt": "Mio chat home screen with the heading 'Hey dev, let's build something lovely' and four suggested prompts",
+          "caption": "Home"
+        }
       ],
-      "images": [],
-      "links": []
+      "links": [
+        {
+          "label": "Try it live",
+          "url": "https://mio-chat.onrender.com/"
+        }
+      ],
+      "embedUrl": "https://mio-chat.onrender.com/"
     },
     {
       "title": "GraphQL service layer",
@@ -221,37 +228,27 @@
       "links": []
     },
     {
-      "title": "AI chatbot",
-      "context": "AI project",
-      "summary": "A chatbot web app with a Gemini-inspired interface, built with React and deployed on Render. It has a greeting screen with suggested prompts, a prompt box with image and voice buttons, a loading state while the answer arrives, and a history and settings sidebar.",
+      "title": "Common data browser",
+      "context": "GE Vernova (MFG)",
+      "summary": "A shared Angular interface for browsing historian data from IoT devices and configuring data sources. Teams drop it into their product instead of building their own.",
       "highlights": [
-        "Built with React.",
-        "Live and open to try."
+        "Used by 3 products across teams.",
+        "Data access is separate from presentation, and the component is configured through inputs.",
+        "Cut duplicated UI code by about 40%."
       ],
       "stack": [
-        "React",
-        "JavaScript",
-        "Render"
+        "Angular",
+        "TypeScript",
+        "RxJS"
       ],
-      "steps": [],
-      "images": [
-        {
-          "src": "/assets/projects/chatbot-home.webp",
-          "alt": "Chatbot home screen greeting the user with four suggested prompts",
-          "caption": "Home"
-        },
-        {
-          "src": "/assets/projects/chatbot-chat.webp",
-          "alt": "Chatbot showing a user message and an animated loading state for the reply",
-          "caption": "Chat"
-        }
+      "steps": [
+        "IoT devices",
+        "Historian data",
+        "Common data browser",
+        "Product screens"
       ],
-      "links": [
-        {
-          "label": "Try it live",
-          "url": "https://gemini-ko89.onrender.com"
-        }
-      ]
+      "images": [],
+      "links": []
     }
   ]
 }

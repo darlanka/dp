@@ -30,3 +30,10 @@ export enum HttpStatus {
   BadRequest = 400,
   TooManyRequests = 429,
 }
+
+export enum PreviewState {
+  Idle = 'idle',
+  Loading = 'loading',
+  Live = 'live',
+  TimedOut = 'timed-out',
+}

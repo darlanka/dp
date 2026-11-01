@@ -26,15 +26,7 @@ public class ContactController {
         if (request.looksLikeBot()) {
             return; // pretend it worked, store nothing
         }
-        service.save(request, clientIp(http));
+        service.sendMail(request);
     }
 
-    // Behind a reverse proxy or tunnel the real address arrives in X-Forwarded-For.
-    private static String clientIp(HttpServletRequest http) {
-        String forwarded = http.getHeader("X-Forwarded-For");
-        if (forwarded != null && !forwarded.isBlank()) {
-            return forwarded.split(",")[0].strip();
-        }
-        return http.getRemoteAddr();
-    }
 }

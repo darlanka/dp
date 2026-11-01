@@ -50,6 +50,7 @@ export interface Project {
   readonly steps: readonly string[];
   readonly images: readonly ProjectImage[];
   readonly links: readonly ProjectLink[];
+  readonly embedUrl?: string | null;
 }
 
 export interface ProjectImage {

@@ -1,0 +1,29 @@
+@switch (state()) {
+@case (PreviewState.Idle) {
+<app-screenshot-viewer [images]="images()" />
+<div class="actions">
+    <button type="button" (click)="start()">Load live preview</button>
+</div>
+}
+@case (PreviewState.TimedOut) {
+<app-screenshot-viewer [images]="images()" />
+<p class="note">
+    The live app is taking too long to respond, so this is a screenshot.
+    <a [href]="url()" target="_blank" rel="noopener">Open it in a new tab</a>.
+</p>
+}
+@default {
+@if (safeUrl(); as src) {
+<div class="frame">
+    <iframe [src]="src" [title]="title() + ' live preview'" sandbox="allow-scripts allow-same-origin allow-forms"
+        referrerpolicy="no-referrer" (load)="onLoaded()"></iframe>
+    @if (state() === PreviewState.Loading) {
+    <p class="waking">Waking the app up. Free hosting can take a few seconds.</p>
+    }
+</div>
+<div class="actions">
+    <button type="button" (click)="reset()">Back to screenshot</button>
+</div>
+}
+}
+}

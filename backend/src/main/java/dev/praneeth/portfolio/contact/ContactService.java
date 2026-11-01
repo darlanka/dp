@@ -12,7 +12,9 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import jakarta.mail.MessagingException;
 
+import org.springframework.mail.MailException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -26,33 +28,27 @@ public class ContactService {
 
     private static final Duration WINDOW = Duration.ofHours(1);
 
+    private final ContactMailer mailer;
     private final ObjectMapper mapper;
     private final Path file;
     private final int limitPerHour;
     private final Map<String, Deque<Instant>> recentByIp = new ConcurrentHashMap<>();
 
-    public ContactService(ObjectMapper mapper,
+    public ContactService(ObjectMapper mapper,ContactMailer mailer,
                           @Value("${portfolio.contact.file}") String file,
                           @Value("${portfolio.contact.limit-per-hour}") int limitPerHour) {
         this.mapper = mapper;
         this.file = Path.of(file);
         this.limitPerHour = limitPerHour;
+        this.mailer = mailer;
     }
 
-    public void save(ContactRequest request, String ip) {
-        checkRate(ip);
-
-        var entry = Map.of(
-                "receivedAt", Instant.now().toString(),
-                "name", request.name().strip(),
-                "email", request.email().strip(),
-                "message", request.message().strip());
+    public void sendMail(ContactRequest request) {
 
         try {
-            String line = mapper.writeValueAsString(entry) + System.lineSeparator();
-            writeLine(line);
-        } catch (JsonProcessingException e) {
-            throw new IllegalStateException("Could not serialise message", e);
+            mailer.send(request);
+        } catch (MailException e) {
+            throw new RuntimeException("failed to send email",e);
         }
     }
 
