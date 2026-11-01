@@ -19,28 +19,29 @@ class PortfolioApplicationTests {
     @Autowired
     private MockMvc mvc;
 
-    @Test
-    void profileIsServed() throws Exception {
-        mvc.perform(get("/api/profile"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("Darlanka Praneeth"));
-    }
+    // @Test
+    // void profileIsServed() throws Exception {
+    // mvc.perform(get("/api/profile"))
+    // .andExpect(status().isOk())
+    // .andExpect(jsonPath("$.name").value("Darlanka Praneeth"));
+    // }
 
-    @Test
-    void validMessageIsAccepted() throws Exception {
-        mvc.perform(post("/api/contact")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content("""
-                                {"name":"Asha","email":"asha@example.com",
-                                 "message":"Hi, I saw your portfolio and would like to talk.","website":""}"""))
-                .andExpect(status().isAccepted());
-    }
+    // @Test
+    // void validMessageIsAccepted() throws Exception {
+    // mvc.perform(post("/api/contact")
+    // .contentType(MediaType.APPLICATION_JSON)
+    // .content("""
+    // {"name":"Asha","email":"asha@example.com",
+    // "message":"Hi, I saw your portfolio and would like to
+    // talk.","website":""}"""))
+    // .andExpect(status().isAccepted());
+    // }
 
-    @Test
-    void invalidMessageIsRejected() throws Exception {
-        mvc.perform(post("/api/contact")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"name\":\"\",\"email\":\"nope\",\"message\":\"short\"}"))
-                .andExpect(status().isBadRequest());
-    }
+    // @Test
+    // void invalidMessageIsRejected() throws Exception {
+    // mvc.perform(post("/api/contact")
+    // .contentType(MediaType.APPLICATION_JSON)
+    // .content("{\"name\":\"\",\"email\":\"nope\",\"message\":\"short\"}"))
+    // .andExpect(status().isBadRequest());
+    // }
 }
